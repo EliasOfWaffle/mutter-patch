@@ -142,7 +142,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson -Dxwayland=false 
+%meson -Dxwayland=false -Dtests=false
 %meson_build
 
 %install
