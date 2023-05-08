@@ -130,14 +130,6 @@ Requires: mesa-libEGL-devel
 Header files and libraries for developing Mutter plugins. Also includes
 utilities for testing Metacity/Mutter themes.
 
-%package  tests
-Summary:  Tests for the %{name} package
-Requires: %{name}%{?_isa} = %{version}-%{release}
-
-%description tests
-The %{name}-tests package contains tests that can be used to verify
-the functionality of the installed %{name} package.
-
 %prep
 %autosetup -S git -n %{name}-%{tarball_version}
 
