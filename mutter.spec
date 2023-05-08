@@ -30,15 +30,6 @@ License:       GPLv2+
 URL:           http://www.gnome.org
 Source0:       https://download.gnome.org/sources/%{name}/44/%{name}-%{tarball_version}.tar.xz
 
-# Work-around for OpenJDK's compliance test
-Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
-
-# To make s390x build pass
-Patch1:        0001-Revert-build-Do-not-provide-built-sources-as-libmutt.patch
-
-# https://bugzilla.redhat.com/show_bug.cgi?id=1936991
-Patch2:        mutter-42.alpha-disable-tegra.patch
-
 # https://pagure.io/fedora-workstation/issue/79
 Patch3:        0001-place-Always-center-initial-setup-fedora-welcome.patch
 
@@ -151,7 +142,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson -Dxwayland=false
+%meson -Dxwayland=false 
 %meson_build
 
 %install
