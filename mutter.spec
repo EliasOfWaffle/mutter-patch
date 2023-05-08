@@ -153,7 +153,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson -Degl_device=true -Dwayland_eglstream=true
+%meson -Degl_device=true -Dwayland_eglstream=true  -Dxwayland=false
 %meson_build
 
 %install
