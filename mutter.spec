@@ -170,11 +170,6 @@ the functionality of the installed %{name} package.
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*
 
-%files tests
-%{_libexecdir}/installed-tests/mutter-%{mutter_api_version}
-%{_datadir}/installed-tests/mutter-%{mutter_api_version}
-%{_datadir}/mutter-%{mutter_api_version}/tests
-
 %changelog
 * Tue Apr 25 2023 Florian Müllner <fmuellner@gnome.org> - 44.1-1
 - Update to 44.1
