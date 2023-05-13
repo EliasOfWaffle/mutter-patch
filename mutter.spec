@@ -8,6 +8,8 @@
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
 ## END: Set by rpmautospec
 
+%global toolchain clang
+
 %global glib_version 2.75.1
 %global gtk3_version 3.19.8
 %global gtk4_version 4.0.0
@@ -23,7 +25,7 @@
 
 Name:          mutter
 Version:       44.1
-Release:       %autorelease
+Release:       faster_%autorelease
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
@@ -155,7 +157,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson -Degl_device=true -Dwayland_eglstream=true
+%meson --buildtype=release --Db_lto=true -Db_lto_mode=default -Degl_device=true -Dwayland_eglstream=true 
 %meson_build
 
 %install
