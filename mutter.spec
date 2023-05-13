@@ -48,6 +48,7 @@ Patch4:        triple-buffering.patch
 
 Patch5:        0001-Enable-all-Experimental-Features.patch
 
+BuildRequires: clang
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
 BuildRequires: pkgconfig(libwacom)
