@@ -46,9 +46,7 @@ Patch3:        0001-place-Always-center-initial-setup-fedora-welcome.patch
  
 Patch4:        triple-buffering.patch 
 
-Patch5:        2966.patch
-
-Patch6:        0001-Enable-all-Experimental-Features.patch
+Patch5:        0001-Enable-all-Experimental-Features.patch
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
