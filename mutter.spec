@@ -157,7 +157,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson --buildtype=release --Db_lto=true -Db_lto_mode=default -Degl_device=true -Dwayland_eglstream=true 
+%meson --buildtype=release -Db_lto=true -Db_lto_mode=default -Degl_device=true -Dwayland_eglstream=true 
 %meson_build
 
 %install
@@ -191,6 +191,12 @@ the functionality of the installed %{name} package.
 %{_datadir}/mutter-%{mutter_api_version}/tests
 
 %changelog
+* Tue Mai 13 2023 Elias Souza <eliascontato@protonmail.com> - 44.1-faster
+- Use Clang Toolchain
+- Enable Clang Full LTO
+- Use Dynamic Triple/Double Buffering Patch
+- Enable all Experimental Features
+
 * Tue Apr 25 2023 Florian Müllner <fmuellner@gnome.org> - 44.1-1
 - Update to 44.1
 
