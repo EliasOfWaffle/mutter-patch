@@ -158,7 +158,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson --buildtype=release -Db_lto=true -Db_lto_mode=default -Degl_device=true -Dwayland_eglstream=true 
+%meson -Db_lto=true -Db_lto_mode=default -Degl_device=true -Dwayland_eglstream=true 
 %meson_build
 
 %install
