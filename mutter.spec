@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease, autochangelog
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 1;
+    release_number = 2;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -25,12 +25,13 @@
 
 Name:          mutter
 Version:       44.1
-Release:       faster_%autorelease
+Release:       %autorelease
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
 URL:           http://www.gnome.org
 Source0:       https://download.gnome.org/sources/%{name}/44/%{name}-%{tarball_version}.tar.xz
+Source1: org.gnome.login-screen.gschema.override
 
 # Work-around for OpenJDK's compliance test
 Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
@@ -45,8 +46,6 @@ Patch2:        mutter-42.alpha-disable-tegra.patch
 Patch3:        0001-place-Always-center-initial-setup-fedora-welcome.patch
  
 Patch4:        triple-buffering.patch 
-
-Patch5:        0001-Enable-all-Experimental-Features.patch
 
 BuildRequires: clang
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
@@ -176,6 +175,7 @@ the functionality of the installed %{name} package.
 %{_libexecdir}/mutter-x11-frames
 %{_datadir}/GConf/gsettings/mutter-schemas.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.mutter.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.mutter.gschema.override
 %{_datadir}/glib-2.0/schemas/org.gnome.mutter.wayland.gschema.xml
 %{_datadir}/gnome-control-center/keybindings/50-mutter-*.xml
 %{_mandir}/man1/mutter.1*
