@@ -163,6 +163,8 @@ the functionality of the installed %{name} package.
 %install
 %meson_install
 
+cp -a %{SOURCE1} %{buildroot}%{_datadir}/glib-2.0/schemas
+
 %find_lang %{name}
 
 %files -f %{name}.lang
@@ -190,6 +192,7 @@ the functionality of the installed %{name} package.
 %{_libexecdir}/installed-tests/mutter-%{mutter_api_version}
 %{_datadir}/installed-tests/mutter-%{mutter_api_version}
 %{_datadir}/mutter-%{mutter_api_version}/tests
+
 
 %changelog
 * Tue Mai 13 2023 Elias Souza <eliascontato@protonmail.com> - 44.1-2
