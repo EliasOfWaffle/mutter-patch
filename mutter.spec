@@ -192,8 +192,7 @@ the functionality of the installed %{name} package.
 %{_datadir}/mutter-%{mutter_api_version}/tests
 
 %changelog
-
-* Tue Mai 13 2023 Elias Souza <eliascontato@protonmail.com> - 44.1
+* Tue Mai 13 2023 Elias Souza <eliascontato@protonmail.com> - 44.1-2
 - Use Clang Toolchain
 - Enable Clang Full LTO
 - Use Dynamic Triple/Double Buffering Patch
