@@ -20,11 +20,13 @@
 %global lcms2_version 2.6
 %global colord_version 1.4.5
 %global mutter_api_version 12
-
+%global gnome_version 44.1
 %global tarball_version %%(echo %{version} | tr '~' '.')
 
+### Macro copied from Calcastor user source: https://download.copr.fedorainfracloud.org/results/calcastor/gnome-patched/fedora-38-x86_64/05849419-mutter/mutter.spec
+
 Name:          mutter
-Version:       44.1
+Version:       %{gnome_version}.faster.1
 Release:       faster%{dist}
 Summary:       Window and compositing manager based on Clutter
 
