@@ -1,2 +1,2 @@
 [org.gnome.mutter.MetaExperimentalFeature] 
-  experimental-features="['scale-monitor-framebuffer', 'kms-modifiers', 'rt-scheduler', 'autoclose-xwayland']"
+experimental-features="['scale-monitor-framebuffer', 'kms-modifiers', 'rt-scheduler', 'autoclose-xwayland']"
