@@ -167,8 +167,14 @@ the functionality of the installed %{name} package.
 
 cp -a %{SOURCE1} %{buildroot}%{_datadir}/glib-2.0/schemas
 
-%find_lang %{name}
+mkdir -p %{buildroot}/usr/share/glib-2.0/schemas
+install -m 644 %{SOURCE1} %{buildroot}/usr/share/glib-2.0/schemas
 
+%find_lang %{name}
+ 
+%post
+glib-recompile-schemas %{buildroot}/usr/share/glib-2.0/schemas
+ 
 %files -f %{name}.lang
 %license COPYING
 %doc NEWS
@@ -185,6 +191,7 @@ cp -a %{SOURCE1} %{buildroot}%{_datadir}/glib-2.0/schemas
 %{_mandir}/man1/mutter.1*
 %{_udevrulesdir}/61-mutter.rules
 
+
 %files devel
 %{_includedir}/*
 %{_libdir}/lib*.so
@@ -194,8 +201,7 @@ cp -a %{SOURCE1} %{buildroot}%{_datadir}/glib-2.0/schemas
 %{_libexecdir}/installed-tests/mutter-%{mutter_api_version}
 %{_datadir}/installed-tests/mutter-%{mutter_api_version}
 %{_datadir}/mutter-%{mutter_api_version}/tests
-
-
+ 
 %changelog
 * Tue Mai 13 2023 Elias Souza <eliascontato@protonmail.com> - 44.1-2
 - Use Clang Toolchain
