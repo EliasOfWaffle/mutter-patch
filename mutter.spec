@@ -27,7 +27,7 @@
 
 Name:          mutter
 Version:       %{gnome_version}
-Release:       6%{dist}
+Release:       7%{dist}
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
