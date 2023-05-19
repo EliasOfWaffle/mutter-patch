@@ -27,7 +27,7 @@
 
 Name:          mutter
 Version:       %{gnome_version}
-Release:       7%{dist}
+Release:       8%{dist}
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
@@ -172,7 +172,6 @@ install -m 644 %{SOURCE1} %{buildroot}/usr/share/glib-2.0/schemas
 
 %find_lang %{name}
  
-%post
 glib-recompile-schemas %{buildroot}/usr/share/glib-2.0/schemas
  
 %files -f %{name}.lang
