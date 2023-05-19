@@ -172,8 +172,6 @@ install -m 644 %{SOURCE1} %{buildroot}/usr/share/glib-2.0/schemas
 
 %find_lang %{name}
  
-glib-recompile-schemas %{buildroot}/usr/share/glib-2.0/schemas
- 
 %files -f %{name}.lang
 %license COPYING
 %doc NEWS
