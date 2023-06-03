@@ -42,7 +42,7 @@ Patch2:        mutter-42.alpha-disable-tegra.patch
 # https://pagure.io/fedora-workstation/issue/79
 Patch3:        0001-place-Always-center-initial-setup-fedora-welcome.patch
 
-Patch4:       Support-Dynamic-triple-double-buffering.patch
+Patch4:       0001-Squashed-commit-of-the-following.patch
 
 Patch6:       meson-add-back-default_driver-option.patch
 
@@ -73,7 +73,7 @@ BuildRequires: pam-devel
 BuildRequires: pkgconfig(libpipewire-0.3) >= %{pipewire_version}
 BuildRequires: pkgconfig(sysprof-capture-4)
 BuildRequires: sysprof-devel
-BuildRequires: pkgconfig(libsystemd)
+BuildRequires: pkgconfig(libsystemd
 BuildRequires: xorg-x11-server-Xorg
 BuildRequires: xorg-x11-server-Xvfb
 BuildRequires: pkgconfig(xkeyboard-config)
