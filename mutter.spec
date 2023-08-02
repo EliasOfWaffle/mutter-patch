@@ -12,10 +12,9 @@
 %global tarball_version %%(echo %{version} | tr '~' '.')
 %global original_name mutter
 
-Name:          mutter-triplebuffer
-Provides:      mutter
+Name:          mutter
 Version:       44.3
-Release:       %autorelease
+Release:      %autorelease.triplebuffer
 Summary:       Window and Wayland compositor based on Clutter with Triple Buffer patch 
 
 patch1:        Support-Dynamic-triple-double-buffering.patch
