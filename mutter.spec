@@ -113,8 +113,8 @@ to add fancy visual effects and to rework the window management
 behaviors to meet the needs of the environment.
 
 %package devel
-Summary: Development package for %{name}
-Requires: %{name}%{?_isa} = %{version}-%{release}
+Summary: Development package for %{original_name}
+Requires: %{original_name}%{?_isa} = %{version}-%{release}
 # for EGL/eglmesaext.h that's included from public cogl-egl-defines.h header
 Requires: mesa-libEGL-devel
 
@@ -123,15 +123,15 @@ Header files and libraries for developing Mutter plugins. Also includes
 utilities for testing Metacity/Mutter themes.
 
 %package  tests
-Summary:  Tests for the %{name} package
-Requires: %{name}%{?_isa} = %{version}-%{release}
+Summary:  Tests for the %{original_name} package
+Requires: %{original_name}%{?_isa} = %{version}-%{release}
 
 %description tests
-The %{name}-tests package contains tests that can be used to verify
-the functionality of the installed %{name} package.
+The %{original_name}-tests package contains tests that can be used to verify
+the functionality of the installed %{original_name} package.
 
 %prep
-%autosetup -S git -n %{name}-%{tarball_version}
+%autosetup -S git -n %{original_name}-%{tarball_version}
 
 %build
 %meson
@@ -140,9 +140,9 @@ the functionality of the installed %{name} package.
 %install
 %meson_install
 
-%find_lang %{name}
+%find_lang %{original_name}
 
-%files -f %{name}.lang
+%files -f %{original_name}.lang
 %license COPYING
 %doc NEWS
 %{_bindir}/mutter
