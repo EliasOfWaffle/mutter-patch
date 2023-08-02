@@ -10,20 +10,20 @@
 %global mutter_api_version 12
 
 %global tarball_version %%(echo %{version} | tr '~' '.')
+%global original_name mutter
 
 Name:          mutter-triplebuffer
 Conflicts:     mutter
 Provides:      mutter
-Obsoletes:     mutter
 Version:       44.3
 Release:       %autorelease
-Summary:       Window and compositing manager based on Clutter
+Summary:       Window and Wayland compositor based on Clutter with Triple Buffer patch 
 
 patch1:        Support-Dynamic-triple-double-buffering.patch
 
 License:       GPLv2+
 URL:           http://www.gnome.org
-Source0:       http://download.gnome.org/sources/%{name}/44/%{name}-%{tarball_version}.tar.xz
+Source0:       http://download.gnome.org/sources/mutter/44/%{original_name}-%{tarball_version}.tar.xz
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
@@ -89,7 +89,7 @@ Requires: json-glib%{?_isa} >= %{json_glib_version}
 Requires: libinput%{?_isa} >= %{libinput_version}
 Requires: pipewire%{_isa} >= %{pipewire_version}
 Requires: startup-notification
-Requires: dbus
+Requires: dbu
 
 Recommends: mesa-dri-drivers%{?_isa}
 
