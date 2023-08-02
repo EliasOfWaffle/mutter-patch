@@ -13,7 +13,7 @@
 %global original_name mutter
 
 Name:          mutter-triplebuffer
-Conflicts:     mutter
+Replaces:      mutter
 Provides:      mutter
 Version:       44.3
 Release:       %autorelease
