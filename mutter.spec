@@ -22,8 +22,8 @@ Summary:       Window and Wayland compositor based on Clutter with Triple Buffer
 patch1:        Support-Dynamic-triple-double-buffering.patch
 
 License:       GPLv2+
-URL:           http://www.gnome.org
-Source0:       http://download.gnome.org/sources/mutter/44/%{original_name}-%{tarball_version}.tar.xz
+URL:           https://www.gnome.org
+Source0:       https://download.gnome.org/sources/mutter/44/%{original_name}-%{tarball_version}.tar.xz
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
