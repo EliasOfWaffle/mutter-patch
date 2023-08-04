@@ -87,7 +87,7 @@ Requires: json-glib%{?_isa} >= %{json_glib_version}
 Requires: libinput%{?_isa} >= %{libinput_version}
 Requires: pipewire%{_isa} >= %{pipewire_version}
 Requires: startup-notification
-Requires: dbu
+Requires: dbus
 
 Recommends: mesa-dri-drivers%{?_isa}
 
