@@ -11,9 +11,10 @@
 %global mutter_api_version 13
 
 %global tarball_version %%(echo %{version} | tr '~' '.')
+%global gnome_build 45~beta.1
 
 Name:          mutter
-Version:       45~beta.1
+Version:       {%gnome_build}.triplebuffer.1
 Release:       %autorelease
 Summary:       Window and compositing manager based on Clutter
 
@@ -29,6 +30,9 @@ Patch1:        mutter-42.alpha-disable-tegra.patch
 
 # https://pagure.io/fedora-workstation/issue/79
 Patch2:        0001-place-Always-center-initial-setup-fedora-welcome.patch
+
+# Dynamic Triple Buffering
+Patch3: 	   0001-Squashed-commit-of-the-following.patch
 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 1.41.0
 BuildRequires: pkgconfig(sm)
@@ -153,7 +157,7 @@ the functionality of the installed %{name} package.
 %autosetup -S git -n %{name}-%{tarball_version}
 
 %build
-%meson -Degl_device=true -Dwayland_eglstream=true
+%meson
 %meson_build
 
 %install
