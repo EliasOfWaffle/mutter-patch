@@ -14,8 +14,8 @@
 %global gnome_build 45~beta.1
 
 Name:          mutter
-Version:       45~beta.1-2
-Release:       %autorelease
+Version:       45~beta.1
+Release:       -2%dist
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
